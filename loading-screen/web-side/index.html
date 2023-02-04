@@ -1,0 +1,61 @@
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>LoadingScreen</title>
+		<link href="style/css.css" rel="stylesheet" type="text/css"/>
+	</head>
+	<body>
+		<div class="container">
+			<img src="imgs/background.png" alt="loading" width="100%" height="100%" position="absolute">
+		</div>
+		  <div class="wrapper">
+			<div class="circle"></div>
+			<div class="circle"></div>
+			<div class="circle"></div>
+			<div class="shadow"></div>
+			<div class="shadow"></div>
+			<div class="shadow"></div>
+		  </div>
+		  <div class="loader">
+             <span>C</span>
+			 <span>A</span>
+			 <span>R</span>
+			 <span>R</span>
+			 <span>E</span>
+			 <span>G</span>
+			 <span>A</span>
+			 <span>N</span>
+			 <span>D</span>
+			 <span>O</span>
+			 <span>.</span>
+			 <span>.</span>
+			 <span>.</span>
+		  </div>
+		  <audio id="loading-music" autoplay="autoplay">
+			<source hidden="true" autostart="true" loop="true" src="music/Musica.mp3" />
+		</audio>
+		<div class="logo">
+			 <img src="imgs/logo.png" alt="">  <!-- tamanho = 500x500 -->
+		</div>
+		
+		<script type="text/javascript">
+			var music = document.getElementById("loading-music");
+			music.volume = 0.1;
+			document.addEventListener('keypress', (event) => {
+			  if(event.key == "p") {
+				  if(music.paused) {
+					  music.play();
+				  }else{
+					  music.pause();
+				  }
+			  }else if(event.key == "s") {
+				  music.volume = music.volume-0.05;
+			  }else if(event.key == "w") {
+				  music.volume = music.volume+0.05;
+			  }
+			});
+			
+		</script>
+		   </div> 
+	</body>
+</html>
